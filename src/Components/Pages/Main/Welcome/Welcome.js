@@ -2,8 +2,12 @@ import React, {useState} from "react";
 import style from "./Welcome.module.css";
 import cx from 'classnames/bind';
 import Typewriter from "../../../Common/Typewriter/Typewriter";
+import { setStart } from '../../../../Redux/Reducers/initReducer';
+import { useDispatch } from 'react-redux';
 
 const Welcome = () => {
+    const dispatch = useDispatch();
+
     const [state, setState] = useState({
         invisible: false,
         display: true
@@ -11,7 +15,10 @@ const Welcome = () => {
 
     setTimeout(() => {
         setState(prevState => ({ ...prevState, invisible: true }));
-        setTimeout(() => setState(prevState => ({ ...prevState, display: false })), 1000);
+        setTimeout(() => {
+            setState(prevState => ({ ...prevState, display: false }));
+            dispatch(setStart(true));
+        }, 1000);
     }, 15000);
 
 
