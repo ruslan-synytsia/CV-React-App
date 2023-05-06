@@ -1,0 +1,155 @@
+.Form {
+    background-color: #ffffff;
+    position: relative;
+}
+
+.Form h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    width: 75%;
+}
+
+.Form label {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.Form span,
+.Form input,
+.Form textarea,
+.Form button {
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.Form span {
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.Form input,
+.Form textarea {
+    font-family: 'Cabin', sans-serif;
+    font-size: 1rem;
+    padding: .5rem 0;
+}
+
+.Form input {
+    border: none;
+    border-bottom: 1px solid #444444;
+}
+
+.Form textarea {
+    border-style: none;
+    border-bottom: 1px solid #444444;
+    outline: none;
+    overflow: hidden;
+    resize: none;
+    margin-bottom: 3rem;
+}
+
+.Form input::placeholder,
+.Form textarea::placeholder {
+    color: #c2c2c2;
+    font-family: 'Cabin', sans-serif;
+}
+
+.Form input:focus,
+.Form textarea:focus {
+    outline: none;
+}
+
+.Form button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #666666;
+    border: none;
+    border-radius: .5rem;
+    height: 2.5rem;
+    transition: background-color .75s ease;
+}
+
+.Form button:hover {
+    background-color: #222222;
+}
+
+.Form .Error_username,
+.Form .Error_email,
+.Form .Error_message {
+    color: red;
+    display: inline;
+    font-weight: normal;
+    margin-left: 1rem;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.Form .err_display {
+    transition: opacity .5s ease;
+}
+
+.Form .err_display {
+    opacity: 1;
+}
+
+.Form button.disabled,
+.Form button.disabled:hover {
+    cursor: default;
+    background-color: #a3a3a3;
+}
+
+.Form_finish,
+.Form_finish_error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: #333333;
+    border-radius: .5rem;
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    height: calc(100% - 1rem);
+    top: 0;
+    z-index: -10;
+    opacity: 0;
+    transition: opacity 1s ease, z-index 1s ease;
+}
+
+.Form_finish h2 {
+    text-align: center;
+}
+
+.Form_finish .success {
+    border-left: .5rem solid #444444;
+    border-bottom: 1rem solid #444444;
+    width: 5rem;
+    height: 3rem;
+    transform: rotate(-45deg);
+    margin-bottom: 2rem;
+}
+
+.Form_finish_error h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.Form_finish_error .error {
+    font-size: 5rem;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+.visible {
+    z-index: 10;
+    opacity: 1;
+}

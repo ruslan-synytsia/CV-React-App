@@ -1,0 +1,27 @@
+.Welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    height: 100vh;
+    width: 100vw;
+}
+
+.Welcome h1 {
+    font-size: 2.5rem;
+    width: 50vw;
+}
+
+.invisible {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.display_none {
+    display: none;
+}

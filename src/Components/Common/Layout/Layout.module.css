@@ -1,0 +1,47 @@
+.container {
+    width: clamp(100px, 80%, 1170px);
+    margin: 0 auto;
+}
+
+.logo {
+    line-height: .7rem;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    padding-top: 2rem;
+    background-color: #ffffff;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+}
+
+header .container li {
+    text-align: center;
+    transition: background-color .75s ease, color .75s ease;
+}
+
+header .container li:not(:first-child):hover {
+    color: #ffffff;
+    background-color: #444444;
+}
+
+header .container li a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: .75rem 0;
+    width: 8rem;
+}
+
+header .container li a.active {
+    color: #ffffff;
+    background-color: #444444;
+}
